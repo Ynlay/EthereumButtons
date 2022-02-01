@@ -1,0 +1,28 @@
+<html>
+    <body>
+<script src="js/web3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    // Initialize Web3
+    if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+    } else {
+        web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+    }
+
+    // Set Account
+    web3.eth.defaultAccount = web3.eth.accounts[0];
+    
+    // Set Contract Abi && Address
+    var contractAbi;
+    var contractAddress;
+
+    // Set the Contract
+    var contract = web3.eth.contract(contractAbi).at(contractAddress);
+
+    // Display Name 
+    
+</script>
+</body>
+</html>
